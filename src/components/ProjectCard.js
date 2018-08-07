@@ -5,6 +5,8 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import homeCompImage from "../images/projects/homecomp.jpg";
+import Img from "gatsby-image";
+
 const styles = {
   card: {
     maxWidth: 345
@@ -16,22 +18,21 @@ const styles = {
 };
 
 const ProjectCard = props => {
-  const { classes } = props;
+  const { classes, dangerHTML } = props;
+  const { title, date, link_live, link_repo } = props.frontmatter;
+
   return (
     <Card className={classes.card}>
-      <CardMedia
-        className={classes.media}
-        image={homeCompImage}
-        title="Home Comp"
-      />
+      <Img sizes={props.frontmatter.featuredImage.childImageSharp.sizes} />
+
       <CardContent>
         <Typography gutterBottom variant="headline" component="h2">
-          HOMECOMP
+          {title}
         </Typography>
-        <Typography component="p">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
+        <Typography
+          component="div"
+          dangerouslySetInnerHTML={{ __html: dangerHTML }}
+        />
       </CardContent>
     </Card>
   );

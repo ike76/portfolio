@@ -3,10 +3,10 @@ title: 'HOMECOMP'
 date: '2018-07-10'
 link-live: 'http://something.com'
 link-repo: 'http://github/something'
+featuredImage: './homecomp_header.png'
 ---
 
 Homecomp allows you to something something
+furthermore
 
-# wuzzup
-
-## yo
+[]
