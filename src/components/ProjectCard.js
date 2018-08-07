@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "gatsby";
 import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import homeCompImage from "../images/projects/homecomp.jpg";
 import Img from "gatsby-image";
 
 const styles = {
@@ -23,7 +24,11 @@ const ProjectCard = props => {
 
   return (
     <Card className={classes.card}>
-      <Img sizes={props.frontmatter.featuredImage.childImageSharp.sizes} />
+      <Img
+        fadeIn
+        sizes={props.frontmatter.featuredImage.childImageSharp.sizes}
+        className={classes.media}
+      />
 
       <CardContent>
         <Typography gutterBottom variant="headline" component="h2">
@@ -34,6 +39,25 @@ const ProjectCard = props => {
           dangerouslySetInnerHTML={{ __html: dangerHTML }}
         />
       </CardContent>
+      <CardActions>
+        <Button
+          href={link_live}
+          target="_blank"
+          size="small"
+          color="primary"
+          variant="contained"
+        >
+          Live
+        </Button>
+        <Button
+          href={link_repo}
+          target="_blank"
+          size="small"
+          variant="outlined"
+        >
+          Repo
+        </Button>
+      </CardActions>
     </Card>
   );
 };

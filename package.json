@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^1.4.3",
+    "devicon-react": "^1.1.1",
     "gatsby": "next",
     "gatsby-image": "^1.0.55",
     "gatsby-plugin-material-ui": "^0.1.3",
