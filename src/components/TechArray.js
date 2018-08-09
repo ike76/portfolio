@@ -31,9 +31,9 @@ const TechDiv = styled.div`
   }
 `;
 
-export default ({ techArray }) => {
+export default ({ techArray, style }) => {
   return (
-    <TechDiv>
+    <TechDiv style={style}>
       {techArray.map(icon => (
         <Tooltip title={techIcons[icon].tooltip} placement="top">
           <div>{techIcons[icon].component}</div>

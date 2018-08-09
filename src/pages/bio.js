@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
@@ -8,6 +7,8 @@ import Avatar from "@material-ui/core/Avatar";
 import classNames from "classnames";
 import styled from "styled-components";
 import Layout from "../components/layout";
+import TechArray from "../components/TechArray";
+
 import beforeGoogle from "../images/Before-Google-Damn-Shame.jpg";
 import brianImage from "../images/brian-headshot.jpg";
 const CardDiv = styled.div`
@@ -67,13 +68,13 @@ const Bio = ({ classes }) => {
           program at{" "}
           <a href="https://www.thinkful.com" target="blank">
             Thinkful
-          </a>.
+          </a>
+          .
         </Typography>
         <Typography component="p" gutterBottom>
-          After spending most of my adult life as a touring musician, (<em>
-            The Beach Boys, Brian Wilson, The Four Freshmen
-          </em>) I've found the most satisfaction leveraging tech to solve
-          interesting problems.
+          After spending most of my adult life as a touring musician, (
+          <em>The Beach Boys, Brian Wilson, The Four Freshmen</em>) I've found
+          the most satisfaction leveraging tech to solve interesting problems.
         </Typography>
         <Typography component="p">
           My projects thus far have been attempts to create simple
@@ -84,6 +85,10 @@ const Bio = ({ classes }) => {
           Booking flights, coordinating travel, keeping track of where in the
           world we are today.
         </Typography>
+        <TechArray
+          techArray={["html", "css", "javascript", "react", "node"]}
+          style={{ margin: "1rem auto" }}
+        />
       </Paper>
       <CardDiv>
         <Card style={{ width: "310px", textAlign: "center" }} align="center">

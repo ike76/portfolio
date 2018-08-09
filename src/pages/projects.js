@@ -1,14 +1,10 @@
 import React from "react";
-import { graphql } from "gatsby";
+// import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Typography from "@material-ui/core/Typography";
 import ProjectCard from "../components/ProjectCard";
-import styled from "styled-components";
 import Grid from "@material-ui/core/Grid";
 
-const ProjectGrid = styled.div`
-  display: flex;
-`;
 export default ({ data }) => {
   console.log("projects data", data);
   return (
@@ -24,7 +20,6 @@ export default ({ data }) => {
       <Grid container>
         {data.allMarkdownRemark.edges.map(edge => {
           const { node: project } = edge;
-          const { title, date, link_live, link_repo } = project.frontmatter;
           const { html } = project;
           return (
             <Grid item xs={12} sm={6} md={4}>

@@ -1,9 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { Link } from "gatsby";
 import ikeWorksLogo from "../images/ikeworks.logo.white.png";
 import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
 import AppBar from "@material-ui/core/AppBar";

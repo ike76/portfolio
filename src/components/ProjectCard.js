@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "gatsby";
 import { withStyles } from "@material-ui/core/styles";
 import classnames from "classnames";
 import Card from "@material-ui/core/Card";
@@ -11,10 +10,8 @@ import Typography from "@material-ui/core/Typography";
 import Collapse from "@material-ui/core/Collapse";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import IconButton from "@material-ui/core/IconButton";
-import Avatar from "@material-ui/core/Avatar";
 import CardHeader from "@material-ui/core/CardHeader";
 
-import styled from "styled-components";
 import moment from "moment";
 
 import GithubCircle from "mdi-material-ui/GithubCircle";
@@ -74,7 +71,7 @@ class ProjectCard extends Component {
     return (
       <Card className={classes.card} style={{ position: "relative" }}>
         <CardHeader title={title} subheader={moment(date).format("MMM YYYY")} />
-        <a href={link_live} target="_blank">
+        <a href={link_live} target="_blank" rel="noopener noreferrer">
           <Img
             fadeIn
             sizes={this.props.frontmatter.featuredImage.childImageSharp.sizes}
