@@ -12,18 +12,40 @@ import Toolbar from "@material-ui/core/Toolbar";
 const styles = {
   root: {
     flexGrow: 1
+  },
+  flex: {
+    flexGrow: 1
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+    color: "white"
   }
 };
 
 const Header = props => {
   return (
-    <AppBar style={{ border: "2px white solid" }} position="static">
-      <Toolbar>
+    <AppBar
+      style={{ border: "2px white solid", borderRadius: "2rem" }}
+      position="static"
+    >
+      <Toolbar
+        style={{
+          display: "flex",
+          justifyContent: "space-between"
+        }}
+      >
         <Link to="/">
           <img src={ikeWorksLogo} alt="" style={{ height: "80px" }} />
         </Link>
-        <Link to="/projects">PROJECTS</Link>
-        <Link to="/bio">BIO</Link>
+        <div>
+          <Button component={Link} to="/projects" color="inherit">
+            PROJECTS
+          </Button>
+          <Button component={Link} to="/bio" color="inherit">
+            BIO
+          </Button>
+        </div>
       </Toolbar>
     </AppBar>
   );
