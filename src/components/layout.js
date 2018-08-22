@@ -13,7 +13,7 @@ export default ({ children, data }) => {
   return (
     <MuiThemeProvider theme={theme}>
       <Helmet>
-        <title>wuzzup</title>
+        <title>Brian Eichenberger</title>
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"

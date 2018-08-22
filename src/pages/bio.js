@@ -9,6 +9,8 @@ import styled from "styled-components";
 import Layout from "../components/layout";
 import TechArray from "../components/TechArray";
 
+import { Link } from "gatsby";
+
 import beforeGoogle from "../images/Before-Google-Damn-Shame.jpg";
 import brianImage from "../images/brian-headshot.jpg";
 const CardDiv = styled.div`
@@ -72,29 +74,23 @@ const Bio = ({ classes }) => {
           .
         </Typography>
         <Typography component="p" gutterBottom>
-          After spending most of my adult life as a touring musician, (
-          <em>The Beach Boys, Brian Wilson, The Four Freshmen</em>) I've found
-          the most satisfaction leveraging tech to solve interesting problems.
+          During my life as a touring musician, (
+          <em>The Beach Boys, Brian Wilson, The Four Freshmen</em>) I've always
+          been interested in leveraging technology to solve problems.
         </Typography>
         <Typography component="p">
-          My projects thus far have been attempts to create simple
-          <em> tools I wished I had:</em>
+          A life-long learner, my recent focus has been on
+          <strong> React</strong>, and improving UX / UI.
         </Typography>
-
         <Typography component="p" gutterBottom>
-          Booking flights, coordinating travel, keeping track of where in the
-          world we are today.
+          My <Link to="/projects">projects</Link> thus far have been attempts to
+          create simple tools I<em> wished I had</em> during my touring years.
         </Typography>
         <TechArray
           techArray={["html", "css", "javascript", "react", "node"]}
           style={{ margin: "1rem auto" }}
         />
       </Paper>
-      <CardDiv>
-        <Card style={{ width: "310px", textAlign: "center" }} align="center">
-          <img src={beforeGoogle} alt="before google" width="300px" />
-        </Card>
-      </CardDiv>
     </Layout>
   );
 };

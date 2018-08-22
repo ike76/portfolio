@@ -24,7 +24,7 @@ const styles = {
 const Header = props => {
   return (
     <AppBar
-      style={{ border: "2px white solid", borderRadius: "2rem" }}
+      style={{ border: "2px white solid", borderRadius: "10rem" }}
       position="static"
     >
       <Toolbar
